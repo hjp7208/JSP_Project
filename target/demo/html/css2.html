@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>font css</title>
+        <style>
+            /* FONT CSS: CSS를 사용한 글꼴, 크기, 굵기, 스타일 지정 */
+            .serif {
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .sansserif {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .monospace {
+                font-family: 'Lucida Console', Courier, monospace;
+            }
+            .test1 {
+                /* font style */
+                color: blueviolet;
+                font-style: italic;
+                /* oblique는 italic과 비슷 */
+                font-weight: bold;
+                font-size: medium;
+                font-variant: small-caps;   /* 소문자를 대문자로 변경. 크기는 비슷 */
+            }
+            .test2 {
+                /* font 속성으로 여러가지 폰트 설정을 처리
+                font: (style) (variant) (weight) (font-size/line-height) (font-family)
+                */
+                color: brown;
+                font: small-caps bold lighter 20px "Nanum Gothic", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Font CSS 적용할 내용-->
+        <p class="serif">HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!
+        <br>온라인을 달군 '68억 공무원'의 수익 인증에 대한 위조 가능성이 제기됐다. 계좌 이미지를 조작해 '거짓 인증'을 한 것이란 지적이다. 
+        </p>
+        <p class="sansserif">HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!
+        <br>온라인을 달군 '68억 공무원'의 수익 인증에 대한 위조 가능성이 제기됐다. 계좌 이미지를 조작해 '거짓 인증'을 한 것이란 지적이다. 
+        </p>
+        <p class="monospace">HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!
+        <br>온라인을 달군 '68억 공무원'의 수익 인증에 대한 위조 가능성이 제기됐다. 계좌 이미지를 조작해 '거짓 인증'을 한 것이란 지적이다. 
+        </p>
+        <p><span class="test1">HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</span>
+        <br><span class="test2">온라인을 달군 '68억 공무원'의 수익 인증에 대한 위조 가능성이 제기됐다. 계좌 이미지를 조작해 '거짓 인증'을 한 것이란 지적이다.</span>
+        </p>
+    </body>
+</html>

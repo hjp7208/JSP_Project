@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="witdh-device-width, initial-scale=1.0">
+        <title>인접 선택자</title>
+        <style>
+            body {
+                font-size: 0.75rem;
+            }
+
+            article {
+                border: 1px;
+                margin: 10px 0px;
+            }
+            .maim {
+                background-color: gainsboro;
+            }
+            /* 인접 선택자 */
+            article section h2+p {
+                color: blueviolet;
+            }
+            /* 인접 선택자 사용 시 지정된 태크 다음 태그가 존재해야 함. */
+            section p+h2 {
+                color: cadetblue;
+            }
+            /* 형제 자매 선택자 */
+            article~article h2 {
+                color: white;
+                background-color: coral;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>html 연습</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2>학생 테이블</h2>
+        <!-- table 표 생성 -->
+        <table border="2">
+            <!-- tr: 열 생성 -->
+                <!-- column 구분지을 이름 -->
+            <thead>
+                <tr>
+                    <th id="id">학번</th>
+                    <th id="name">이름</th>
+                    <th id="major">학과</th>
+                    <th id="email">이메일</th>
+                </tr>
+            </thead>
+                <!-- 표에 넣을 body 데이터 -->
+            <tbody>
+                <tr class="odd">
+                    <td>202601</td>     <!-- CSS inline 방식 -->
+                    <td>홍길동</td>
+                    <td>체육학과</td>
+                    <td>hong@naver.com</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; color: blueviolet">202602</td>
+                    <td>이순신</td>
+                    <td>해양학과</td>
+                    <td>lee@naver.com</td>
+                </tr>
+                <tr class="odd">
+                    <td>202603</td>
+                    <td>강감찬</td>
+                    <td>정치외교</td>
+                    <td>kang@naver.com</td>
+                </tr>
+                <tr>
+                    <td>202604</td>
+                    <td>유관순</td>
+                    <td>유아교육</td>
+                    <td>yougs@naver.com</td>
+                </tr>
+                <tr class="odd">  
+                    <td>202605</td>
+                    <td>정약용</td>
+                    <td>물리화학</td>
+                    <td>jungyy@naver.com</td>    
+                </tr>
+                <tr>
+                    <td>202606</td>
+                    <td>유성룡</td>
+                    <td>행정학</td>
+                    <td>ryusy@naver.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>    <!-- hr 구분선 -->
+        <h2>이력서 폼 태그</h2>
+        <!-- form 작성(action: 보낼 주소, method: html 프로토콜 메소드)-->
+        <form action="#" method="GET">
+            <p>
+                <img src="images/image1.jpg" width="200px" border="1" alt="이미지 불러오기 실패"> <!-- img 이미지 불러오기 -->
+                <b><label for="userId">이름: </label></b> <input type="text" size="3" id="userId" name="userId">
+                <b><label for="birthDate">생년월일: </label></b> <input type="text" size="5" id="birthDate" name="birthDate"><br>
+                <b><label for="phoneNum">휴대폰: </label></b> <input type="text" size="10" id="phoneNum" name="phoneNum"><br>
+                <b><label for="currentAddr">현주소: </label></b> <input type="text" size="50" id="currentAddr" name="currentAddr">
+                <b><label for="userEmail">이메일: </label></b> <input type="text" size="30" id="userEamil" name="userEmail">
+            </p>
+            <br>
+            <hr>
+            <h3>좋아하는 교과목:</h3>
+                <input type="checkbox" name="favorite">JAVA
+                <input type="checkbox" name="favorite">DATABASE
+                <input type="checkbox" name="favorite">HTML/CSS
+                <input type="checkbox" name="favorite">SPRING
+                <input type="checkbox" name="favorite">REACT/NEXTJS
+            <br>
+            <hr>
+            <h3>학력사항(졸업일/학교명/전공/졸업여부/소재지/성적)</h3>
+                <b><label for="graduateDate">졸업일: </label></b> <input type="date" id="graduateDate" name="graduateDate">
+                <b><label for="school">학교명: </label></b> <input type="text" size="10" id="school" name="school">
+                <b><label for="major">전공: </label></b> <input type="text" size="10" id="major" name="major">
+                <b>졸업여부: </b>
+                    <select>
+                        <option>졸업</option>
+                        <option>졸업대기</option>
+                        <option>재학</option>
+                    </select>
+                <b><label for="address">소재지: </label></b> <input type="text" size="30" id="address" name="address">
+                <b><label for="grade">성적: </label></b> <input type="text" size="2" id="grade" name="grade"><br><hr>
+            <h3>경력사항</h3>
+                <textarea id="introduce" rows="15" cols="150"></textarea><hr>
+            <h3>자기 소개</h3>
+                <textarea id="introduce" rows="15" cols="150"></textarea><hr>
+            <h3>취미</h3>
+                <textarea id="introduce" rows="15" cols="150"></textarea><hr>
+                <input type="submit" value="저장">
+                <input type="button" value="취소">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>사용자로부터 데이터 입력받는 from 태그</title>
+    </head>
+    <body>
+        <!-- 시멘틱 태그는 body 아래에서 사용 -->
+        <!-- 
+            form 태그는 데이터를 입력 받아서 서버에 전송하기 위해서 사용
+            속성 값으로 action, method
+            action: 데이터를 전달 받는 서버를 가르키는 주소
+            method: http 프로토콜에서의 메소드를 지정(GET, POST)
+            enctype: 데이터를 전송하는 방식 지정
+                1. application/x-www-form-urlencoded(기본값)
+                2. text/plain(일반 텍스트)
+                3. multipart/form-data(데이터 별로(name별로) 나눠서 전달)
+            ** HTTP 메소드: GET, POST, PUT, PATCH, DELETE, OPTION, OPTIONS
+            *** GET: 데이터의 전달을 URL에 포함해서 전달하는 방식
+            *** POST: 데이터의 전달을 HTTP 프로토콜의 body부분(데이터 영역)에 넣어서 전달
+        -->
+
+        <!-- form 태그와 데이터를 처리하는 태그들... -->
+        <!-- 예제는 회원 가입 양식 폼태그 -->
+        <form action="#" method="GET">  <!-- form 태그에 method 지정하지 않을 경우 GET 방식으로 전달. -->
+            <h2>회원가입 양식</h2>
+            <hr> <!-- 수평선 태그 -->
+            <!--
+            input 태그를 통해서 데이터 입력
+                속성: type, name, value, 외 속성들이 존재함
+                 name은 전달할 값의 변수명.
+                 value: input에 지정된 value 값을 의미.
+                 type에 따른 입력 값 처리
+                 - text: 문자열 데이터 처리
+                 - password: 문자열 데이터를 처리하는 숨김 처리
+                 - checkbox: 여러개의 값을 선택해서 전달할 때 사용
+                 - radio: 여러개 값 중 하나를 선택해서 전달
+                 - button: 버튼 클릭/릴리즈 시 이벤트 처리를 위해 사용
+                 - email: 이메일 양식에 맞는 값을 넣었는지 확인하는 타입
+                 - 날짜 시간 관련 타입(date, datetime) ...
+                 - submit: 작성(입력된) 데이터를 (form에 정의된) 서버에 전달
+            -->
+            <!--
+                label 태그: 입력 받는 input에 이름 지정하는 태그
+                레이블 붙여서 사용할 태그 지정을 for 속성으로 지정
+                사용 이유: 레이블을 클릭하면, for로 지정된 input으로 focus를 맞춤.
+                id를 사용해서 지정.
+            -->
+            <label for="userId">아이디: </label><input type="text" size="10" id="userId" name="userId"><br>
+            <label for="userPw">비밀번호: </label><input type="password" size="10" id="userPw" name="userPw"><br>
+            관심분야: 
+            <!-- 체크 박스는 하나의 항목(name=변수)에 여러개의 값을 넣을 수 있음. -->
+            <input type="checkbox" name="intro" >JAVA
+            <input type="checkbox" name="intro" >DATABASE
+            <input type="checkbox" name="intro" >HTML/CSS/JAVASCRIPT
+            <input type="checkbox" name="intro" >JSP
+            <input type="checkbox" name="intro" >REACT/NEXTJS
+            <input type="checkbox" name="intro" >SPRING BOOT
+            <br>
+            전공: 
+            <!-- radio 버튼은 항목들 중 하나만 선택 가능-->
+            <input type="radio" name="major">컴공
+            <input type="radio" name="major">경영
+            <input type="radio" name="major">국어국문학
+            <input type="radio" name="major">생물학
+            <br>
+            년도: 
+            <!-- 여러개의 옵션 중 하나를 선택하는 태그: select, option 태그 -->
+            <select>
+                <option>2024이전</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+            </select>
+            <br>
+            <label for="introduce">자기 소개: </label><br>
+            <!-- 입력값 처리 중에 여러 줄의 문자열 데이터를 처리하는 태그: textarea
+             - rows: 문자열 표시하는 줄
+             - cols: 한 줄에 몇개의 문자를 표시할 것인지 결정
+            -->
+            <textarea id="introduce" rows="10" cols="50"></textarea>
+            <br>
+            <!-- 버튼 타입: 버튼 클릭 시 이벤트 처리하는 기능. -->
+            <input type="submit" value="회원가입">
+            <input type="button" value="버튼">
+        </form>
+    </body>
+</html>
