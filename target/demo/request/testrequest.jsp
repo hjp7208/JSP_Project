@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
 <!-- 
     JSP 내장 객체   
     1. request (o)  -> HTTPServletRequest
@@ -34,6 +35,7 @@ request 객체가 갖고 있는 메소드
 -->
 <%
     // request에는 브라우저에 대한 정보를 사용자에게 전달하는 많은 내용이 자동 저장.
+    request.setCharacterEncoding("utf-8");
     StringBuffer url = request.getRequestURL();
     String uri = request.getRequestURI();
     String path = request.getContextPath();
@@ -67,7 +69,7 @@ request 객체가 갖고 있는 메소드
         비밀번호 : <%=pw %><br>
         이름 : <%=name %><br>
         주소 : <%=address %><br>
-        관심분야 : <%=Array.toString(checkboxs) %><br>
+        관심분야 : <%=Arrays.toString(checkboxs) %><br>
         전공 : <%=major %><br>
         통신사 : <%=phone %><br>
     </body>

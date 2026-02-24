@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
 <!-- 
     JSP 내장 객체   
     1. request (o)  -> HTTPServletRequest
@@ -39,6 +40,7 @@
     String path = request.getContextPath();
     String query = request.getQueryString();
     String addr = request.getRemoteAddr();
+    request.setCharacterEncoding("utf-8");
 
     // request에 있는 값을 받기
     String id = request.getParameter("id");
@@ -46,7 +48,7 @@
     String name = request.getParameter("name");
     String address = request.getParameter("addr");
     // checkbox는 getParameterValues 메소드 활용. 여러 개의 값을 하나의 name으로 전달하기 때문
-    String[] checkboxs = request.getParameterValues("intro");
+    String[] checkboxes = request.getParameterValues("intro");
     String major = request.getParameter("major");
     String phone = request.getParameter("phone");
 %>
@@ -66,7 +68,7 @@
         비밀번호 : <%=pw %><br>
         이름 : <%=name %><br>
         주소 : <%=address %><br>
-        관심분야 : <%=Arrays.toString(checkboxs) %><br>
+        관심분야 : <%=Arrays.toString(checkboxes) %><br>
         전공 : <%=major %><br>
         통신사 : <%=phone %><br>
     </body>

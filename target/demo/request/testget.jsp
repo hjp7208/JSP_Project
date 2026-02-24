@@ -32,7 +32,7 @@
 
         <!-- 이름 name, 주소address를 받아서 전송하고, 결과를 출력 -->
         이름 : <input type="text" size="10" name="name"><br>      
-        주소 : <input type="text" size="50" name="address"><br>
+        주소 : <input type="text" size="50" name="addr"><br>
         <br>
         <input type="submit" value="가입">
     </form>
