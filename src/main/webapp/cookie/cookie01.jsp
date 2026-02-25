@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"%>
 <%@ page import="java.text.SimpleDateFormat"%>
-<%@ taglib prefix="c" uri="jakarta.tags.core"%>
-<%@ taglib prefix="fmt" uri="jakarta.tags.fmt"%>
 <%
     /*
     1. Date 클래스를 이용해서 페이지에 접근한 시간 정보를 yyyy년 mm월 dd일 형태로 생성
@@ -11,7 +9,7 @@
     */
     // 날짜 생성
     Date now = new Date();
-    SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+    SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
 
     //쿠키 생성
     Cookie show = new Cookie("show", date.format(now));  // "show": 쿠키 이름

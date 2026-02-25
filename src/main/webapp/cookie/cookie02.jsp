@@ -29,7 +29,7 @@
     </head>
     <body>
         <!-- 쿠키 확인하는 부분 -->
-        <%if(date=null) {%>
+        <%if(date==null) {%>
             <b>쿠키가 없습니다.</b>
         <%} else {%>
             <b>마지막 접속 날짜: <%=date %></b>
