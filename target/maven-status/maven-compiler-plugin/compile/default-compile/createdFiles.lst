@@ -1,3 +1,4 @@
-GugudanServlet.class
-CheckLogin.class
-TestServlet.class
+controller\GugudanServlet.class
+controller\TestServlet.class
+dto\UserInfo.class
+controller\CheckLogin.class

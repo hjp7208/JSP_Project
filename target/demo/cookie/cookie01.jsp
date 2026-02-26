@@ -9,7 +9,7 @@
     */
     // 날짜 생성
     Date now = new Date();
-    SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+    SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss.SSS");
 
     //쿠키 생성
     Cookie show = new Cookie("show", date.format(now));  // "show": 쿠키 이름

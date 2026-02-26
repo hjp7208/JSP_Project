@@ -18,14 +18,7 @@
       height: 50px;
       background-color : aqua;
    }
-   
-
 </style>
-<!-- style 에서
-   . 은 클래스 선택자 , # 은 id선택자로 사용됨. 
- -->
-
-
 </head>
 <body>
 
