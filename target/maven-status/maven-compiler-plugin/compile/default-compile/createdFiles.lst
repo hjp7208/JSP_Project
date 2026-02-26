@@ -1,4 +1,9 @@
+controller\ProductServlet.class
+dto\UserInfo.class
+dto\Members.class
+dto\Product.class
 controller\GugudanServlet.class
 controller\TestServlet.class
-dto\UserInfo.class
 controller\CheckLogin.class
+controller\Memberservlet.class
+controller\BMIServlet.class
